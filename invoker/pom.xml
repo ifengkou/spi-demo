@@ -25,13 +25,13 @@
         </dependency>
         <dependency>
             <groupId>cn.ifengkou</groupId>
-            <artifactId>jiguang_push_provider</artifactId>
+            <artifactId>push_jiguang_provider</artifactId>
             <version>1.0</version>
         </dependency>
 
         <dependency>
             <groupId>cn.ifengkou</groupId>
-            <artifactId>mi_push_provider</artifactId>
+            <artifactId>push_mi_provider</artifactId>
             <version>1.0</version>
         </dependency>
     </dependencies>

@@ -15,13 +15,12 @@ public class MainApp {
         List<String> mobiles = new ArrayList<>(1);
         mobiles.add("18900000000");
         String msg = "你好 Spi";
-        ServiceLoader<Pusher> printerLoader = ServiceLoader.load(Pusher.class);
-        for (Pusher pusher : printerLoader) {
-            String className = pusher.getClass().getName();
-            System.out.println(className);
-            if(className.equals("cn.ifengkou.spi.provider.JiguangPusher")) {
-                pusher.push(mobiles, msg);
-            }
-        }
+
+        Invoker invoker = new Invoker();
+        invoker.setMobiles(mobiles);
+        invoker.setMsg(msg);
+
+        invoker.push();
+
     }
 }
