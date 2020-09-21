@@ -2,7 +2,6 @@ package cn.ifengkou.spi.invoker;
 
 import cn.ifengkou.spi.Pusher;
 
-import java.util.List;
 import java.util.ServiceLoader;
 
 /**
@@ -10,36 +9,23 @@ import java.util.ServiceLoader;
  * @date: 2020/9/18
  */
 public class Invoker {
-    private List<String> mobiles;
+    private String[] mobiles;
     private String msg;
 
-    public int push(){
+    public void push(){
         ServiceLoader<Pusher> printerLoader = ServiceLoader.load(Pusher.class);
         for (Pusher pusher : printerLoader) {
-            int cnt = pusher.push(mobiles, msg);
-            return cnt;
+            pusher.push(mobiles, msg);
             /*String className = pusher.getClass().getName();
             System.out.println(className);
             if(className.equals("cn.ifengkou.spi.provider.JiguangPusher")) {
                 pusher.push(mobiles, msg);
             }*/
         }
-        return 0;
     }
 
-    public List<String> getMobiles() {
-        return mobiles;
-    }
-
-    public void setMobiles(List<String> mobiles) {
+    public Invoker(String[] mobiles, String msg) {
         this.mobiles = mobiles;
-    }
-
-    public String getMsg() {
-        return msg;
-    }
-
-    public void setMsg(String msg) {
         this.msg = msg;
     }
 }

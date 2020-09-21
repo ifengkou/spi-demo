@@ -23,7 +23,7 @@
             <artifactId>push_interface</artifactId>
             <version>1.0</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>cn.ifengkou</groupId>
             <artifactId>push_jiguang_provider</artifactId>
             <version>1.0</version>
@@ -33,7 +33,7 @@
             <groupId>cn.ifengkou</groupId>
             <artifactId>push_mi_provider</artifactId>
             <version>1.0</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
     <build>
         <plugins>
