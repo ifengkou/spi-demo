@@ -13,6 +13,8 @@
         <module>push_mi_provider</module>
         <module>push_jiguang_provider</module>
         <module>invoker</module>
+        <module>invoker_springboot</module>
+        <module>push_factories_provider</module>
     </modules>
 
     <properties>
